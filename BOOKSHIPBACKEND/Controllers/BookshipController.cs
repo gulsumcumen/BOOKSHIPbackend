@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BOOKSHIPBACKEND.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BOOKSHIP.Controllers
 {
     public class BookshipController : Controller
     {
-
+        Context c = new Context();
 
         public IActionResult Index()
         {
