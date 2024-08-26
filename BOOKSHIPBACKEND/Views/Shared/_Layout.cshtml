@@ -22,23 +22,23 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link active" style="color: brown;" aria-disabled="true" href="Bookship/Index/">Anasayfa</a>
+                        <a class="nav-link active" style="color: brown;" aria-disabled="true" href="@Url.Action("Index", "Bookship")">Anasayfa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" style="color: brown;" href="#">Forum</a>
+                        <a class="nav-link" style="color: brown;" href="@Url.Action("Forum", "Bookship")">Forum</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" style="color: brown;" aria-disabled="true" href="#">Takas</a>
+                        <a class="nav-link active" style="color: brown;" aria-disabled="true" href="@Url.Action("Swap", "Bookship")">Takas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" style="color: brown;" aria-disabled="true" href="Bookship/AboutUs/">Hakkımızda</a>
+                        <a class="nav-link active" style="color: brown;" aria-disabled="true" href="@Url.Action("AboutUs", "Bookship")">Hakkımızda</a>
                     </li>
                 </ul>
                 <form class="d-flex">
                     <input class="form-control me-2" type="search" placeholder="ARAMA YAP" aria-label="Search">
                     <button style="color: brown;" class="btn btn-outline-transparent" type="submit">ARA</button>
                 </form>
-                <a href="Bookship/Login/" <i style="color: brown;" class="fa fa-user fa-2x ms-3" aria-hidden="true"></i></a>
+                <a style="color: brown;" class="fa fa-user fa-2x ms-3" aria-hidden="true" href="@Url.Action("Login", "Bookship")"></a>
             </div>
         </div>
     </nav>

@@ -1,9 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BOOKSHIPBACKEND.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BOOKSHIP.Controllers
 {
     public class BookshipController : Controller
     {
+        Context c = new Context();
+
         public IActionResult Index()
         {
             return View();
@@ -21,6 +24,10 @@ namespace BOOKSHIP.Controllers
             return View();
         }
         public IActionResult SignUp()
+        {
+            return View();
+        }
+        public IActionResult Swap()
         {
             return View();
         }
