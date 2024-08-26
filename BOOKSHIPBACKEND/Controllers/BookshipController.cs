@@ -4,6 +4,8 @@ namespace BOOKSHIP.Controllers
 {
     public class BookshipController : Controller
     {
+
+
         public IActionResult Index()
         {
             return View();
@@ -21,6 +23,10 @@ namespace BOOKSHIP.Controllers
             return View();
         }
         public IActionResult SignUp()
+        {
+            return View();
+        }
+        public IActionResult Swap()
         {
             return View();
         }
