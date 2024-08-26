@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - BOOKSHIP</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BOOKSHIPBACKEND.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" style="color:brown;" href="Bookship/Index/">
+                <b>BOOKSHIP</b>
+                <label class="d-flex" style="color: brown; display: inline;">Yeni Nesil Kitap Forumu, 2024</label>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-left: 100px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: brown;" aria-disabled="true" href="Bookship/Index/">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: brown;" href="#">Forum</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: brown;" aria-disabled="true" href="#">Takas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: brown;" aria-disabled="true" href="Bookship/AboutUs/">Hakkımızda</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="ARAMA YAP" aria-label="Search">
+                    <button style="color: brown;" class="btn btn-outline-transparent" type="submit">ARA</button>
+                </form>
+                <a href="Bookship/Login/" <i style="color: brown;" class="fa fa-user fa-2x ms-3" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
+        <section class="d-flex justify-content-between p-4 text-white" style="background-color: brown">
+            <div class="me-5">
+                <span>Sosyal hesaplardan bizimle iletişim kurun:</span>
+            </div>
+            <div>
+                <a href="#" class="text-white me-4">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#" class="text-white me-4">
+                    <i class="fa fa-google"></i>
+                </a>
+                <a href="#" class="text-white me-4">
+                    <i class="fa fa-instagram"></i>
+                </a>
+                <a href="#" class="text-white me-4">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="#" class="text-white me-4">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">BOOKSHIP</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: gray; height: 2px" />
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">İÇERİKLER</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: gray; height: 2px" />
+                        <p><a href="Bookship/Index/" class="text-dark">Anasayfa</a></p>
+                        <p><a href="Bookship/Forum/" class="text-dark">Forum</a></p>
+                        <p><a href="#" class="text-dark">Takas</a></p>
+                        <p><a href="Bookship/AboutUs/" class="text-dark">Hakkımızda</a></p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">KULLANABİLECEĞİN LİNKLER:</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: gray; height: 2px" />
+                        <p><a href="#!" class="text-dark">Hesabım</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - BOOKSHIP - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
