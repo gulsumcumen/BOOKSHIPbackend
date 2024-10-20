@@ -11,7 +11,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" style="color:brown;" href="Bookship/Index/">
+            <a class="navbar-brand" style="color:brown;" href="@Url.Action("Index", "Bookship")">
                 <b>BOOKSHIP</b>
                 <label class="d-flex" style="color: brown; display: inline;">Yeni Nesil Kitap Forumu, 2024</label>
             </a>
@@ -42,8 +42,8 @@
                     <input class="form-control me-2" type="search" placeholder="ARAMA YAP" aria-label="Search">
                     <button style="color: brown;" class="btn btn-outline-transparent" type="submit">ARA</button>
                 </form>
-                <a style="color: brown;" class="fa fa-user fa-2x ms-3" aria-hidden="true" href="@Url.Action("Login", "Bookship")"></a>
-            </div>
+    @*  <a style="color: brown;" class="fa fa-user fa-2x ms-3" aria-hidden="true" href="@Url.Action("Login", "Bookship")"></a>  *@
+            </div> 
         </div>
     </nav>
     <div class="container">
@@ -86,16 +86,16 @@
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-uppercase fw-bold">İÇERİKLER</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: gray; height: 2px" />
-                        <p><a href="Bookship/Index/" class="text-dark">Anasayfa</a></p>
-                        <p><a href="Bookship/Forum/" class="text-dark">Forum</a></p>
-                        <p><a href="#" class="text-dark">Takas</a></p>
-                        <p><a href="Bookship/AboutUs/" class="text-dark">Hakkımızda</a></p>
+                        <p><a href="@Url.Action("Index", "Bookship")" class="text-dark">Anasayfa</a></p>
+                        <p><a href="@Url.Action("Forum", "Bookship")" class="text-dark">Forum</a></p>
+                        <p><a href="@Url.Action("Swap","Bookship")" class="text-dark">Takas</a></p>
+                        <p><a href="@Url.Action("AboutUs","Bookship")" class="text-dark">Hakkımızda</a></p>
                     </div>
 
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                         <h6 class="text-uppercase fw-bold">KULLANABİLECEĞİN LİNKLER:</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: gray; height: 2px" />
-                        <p><a href="#!" class="text-dark">Hesabım</a></p>
+                        <p><a href="@Url.Action("UserSettings", "Bookship")" class="text-dark">Hesabım</a></p>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,7 @@
 ﻿using BOOKSHIPBACKEND.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace BOOKSHIP.Controllers
 {
@@ -23,13 +25,33 @@ namespace BOOKSHIP.Controllers
         {
             return View();
         }
-        public IActionResult SignUp()
+        [HttpPost]
+        public IActionResult SaveUser(char username, char password)
         {
-            return View();
+            var person = new UserInfoClass
+            {
+                UserName = username,
+                Password = password
+            };
+
+            c.UserInfoClasses.Add(person);
+            c.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult SignUp() 
+        {
+        return View();
         }
         public IActionResult Swap()
         {
             return View();
         }
+        public IActionResult UserSettings()
+        {
+            return View();
+        }
     }
 }
+

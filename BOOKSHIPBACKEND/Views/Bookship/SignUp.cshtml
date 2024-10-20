@@ -34,15 +34,18 @@
             </div>
 
             <div class="mb-3">
-                <label for="country" class="form-label">Ülke:</label>
-                <select id="country" name="country" class="form-select" required>
-                    <option value="türkiye">Türkiye</option>
-                    <option value="canada">Canada</option>
-                    <option value="usa">USA</option>
-                </select>
+                <label for="password" class="form-label">Şifre:</label>
+                <input type="password" id="email" name="password" class="form-control" placeholder="*******" required>
             </div>
+            @using (Html.BeginForm("SaveUser", "UserInfoClass", FormMethod.Post))
+            {
+                <label for="username">Kullanıcı adı:</label>
+                <input type="text" id="username" name="username" />
 
-            <button type="submit" class="btn btn-primary">Kaydol</button>
+                <label for="password">Şifre girin:</label>
+                <input type="password" id="password" name="password" />
+                <button type="submit" class="btn btn-secondary">Kaydol</button>
+            }
         </form>
     </div>
 </body>

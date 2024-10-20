@@ -1,0 +1,23 @@
+﻿{
+  "Scenario": "Forecasting",
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "Type": "TrainingConfig",
+  "Version": 4,
+  "TrainingOption": {
+    "Version": 2,
+    "Type": "ForecastingTrainingOption",
+    "TrainingTime": 0,
+    "UseCrossValidation": false,
+    "OptimizeMetric": "RMSE",
+    "Horizon": 10,
+    "UseDefaultIndex": false,
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}
