@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace BOOKSHIPBACKEND.Models
 {
@@ -8,5 +7,4 @@ namespace BOOKSHIPBACKEND.Models
      public char UserName { get; set; }
      public char Password { get; set; }
     }
-
 }

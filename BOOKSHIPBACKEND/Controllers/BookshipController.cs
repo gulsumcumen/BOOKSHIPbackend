@@ -34,7 +34,7 @@ namespace BOOKSHIP.Controllers
                 Password = password
             };
 
-            c.UserInfoClasses.Add(person);
+            c.People.Add(person);
             c.SaveChanges();
 
             return RedirectToAction("Index");
